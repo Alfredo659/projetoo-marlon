@@ -1,0 +1,17 @@
+<!--<h2>Movie List</h2>
+<ul>
+  <li *ngFor="let movie of movies" appHighlight>
+    <a [routerLink]="['/movies', movie.id]">{{ movie.title }}</a> - {{ movie.rating | movieRating }}
+  </li>
+</ul>-->
+
+<!-- movie-list.component.html -->
+
+<div>
+  <h2>Popular Movies</h2>
+  <input [(ngModel)]="searchTerm" (input)="searchMovies()" placeholder="Search movies...">
+  <div *ngFor="let movie of movies">
+    <h3>{{ movie.Title }}</h3>
+    <img [src]="movie.Poster" alt="{{ movie.Title }}" *ngIf="movie.Poster">
+  </div>
+</div>

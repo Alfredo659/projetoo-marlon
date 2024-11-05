@@ -1,0 +1,14 @@
+<div class="container" *ngIf="movie">
+    <h2>{{ movie.Title }} ({{ movie.Year }})</h2>
+    <img [src]="movie.Poster" alt="{{ movie.Title }}" class="img-fluid">
+    <p><strong>Type:</strong> {{ movie.Type }}</p>
+    <p><strong>Rated:</strong> {{ movie.Rated }}</p>
+    <p><strong>Description:</strong> {{ movie.Plot }}</p>
+    <a routerLink="/movies" class="btn btn-secondary">Back to Movies</a>
+  </div>
+  
+  <div *ngIf="!movie">
+    <p>Loading movie details...</p>
+  </div>
+  
+
